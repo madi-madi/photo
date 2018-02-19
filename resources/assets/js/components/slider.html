@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>5dmat-web.com</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+<body>
+
+<div id="app" class="container">
+    <br>
+    <p>
+        <img v-bind:src="imageActive" width="600" height="300">
+    </p>
+    <a href="" @click.prevent="chnageimage(0)" class="btn btn-info">1</a>
+    <a href="" @click.prevent="chnageimage(1)" class="btn btn-info">2</a>
+    <a href="" @click.prevent="chnageimage(2)" class="btn btn-info">3</a>
+    <a href="" @click.prevent="chnageimage(3)" class="btn btn-info">4</a>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    new Vue({
+        el:"#app",
+        data:{
+            images:[
+                "coverthis.jpg",
+                "cover2.jpg",
+                "abdelAziz.jpg",
+                "995016_ebf4.jpg"
+            ],
+            imageActive:"coverthis.jpg"
+        },
+        methods:{
+            chnageimage:function(index){
+                this.imageActive = this.images[index];
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
