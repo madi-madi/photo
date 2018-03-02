@@ -26,7 +26,7 @@ class ImageController extends Controller
   // dd($imageName);
 	
 	//	}
-     // dd($request->image);
+     return($request->image);
       if ($request->hasFile('image')) {
         # code...
         $imageName = $request->image->getClientOriginalName();
